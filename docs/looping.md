@@ -7,7 +7,7 @@ This page tries to collect them and make some sense of them.
 |-----------|-----------------|------------------|--------------------|
 | `for (let i=0; i<obj.length; i++)` | Iterates over indices | N/A | N/A |
 | `for x in obj` | Iterates over indices *and* custom props (incl prototype props), random order | Iterates over enumerable obj props (incl prototype props) | Iterates over `Map` keys; doesn't work for `Set` |
-| `for x of obj` | Iterates over values (in order) | N/A (`Error: obj is not iterable`) | Iterates over values (or `Set` elements) |
+| `for x of obj` | Iterates over values (in order) | N/A (`Error: obj is not iterable`) | Iterates over `[key, value]` for Map, elements for `Set` |
 | `obj.forEach(x => ...)` | Iterates over values (also passes index & array to callback)| N/A (but can do `Object.keys(obj).forEach(...)`) | Map: iterates over values + keys |
 
 Notes:
